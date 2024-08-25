@@ -9,5 +9,12 @@ class Categories extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    protected $fillable = [
+        'name',
+    ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

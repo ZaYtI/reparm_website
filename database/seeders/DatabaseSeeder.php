@@ -9,6 +9,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,6 +19,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory(10)->create();
+
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => "admin@example.com",
+            'isAdmin' => true,
+            'password' => Hash::make('admin')
+        ]);
         Categories::factory(10)->create();
         Product::factory(10)->create();
         Basket::factory(10)->create();

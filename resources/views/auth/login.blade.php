@@ -1,3 +1,10 @@
+<style>
+    .remember-me {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
 <x-auth-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -24,23 +31,26 @@
         </div>
 
         <!-- Remember Me -->
-        <div class="block mt-4">
+        <div class="remember-me mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox"
                     class="rounded white:bg-gray-900 border-gray-300 white:border-gray-700 text-blue-600 shadow-sm white:focus:ring-offset-gray-800"
                     name="remember">
                 <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Se souvenir de moi') }}</span>
             </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
                 <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                     href="{{ route('password.request') }}">
                     {{ __('Mot de passe oublié?') }}
                 </a>
             @endif
+        </div>
 
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800 uppercase"
+                href="{{ route('register') }}">
+                {{ __('Inscription') }}
+            </a>
             <x-primary-button class="ms-3">
                 {{ __('Connexion') }}
             </x-primary-button>

@@ -22,6 +22,7 @@
     }
 
     .who-are-section .logo {
+        max-width: 50%;
         padding-left: 5rem;
         padding-right: 5rem;
     }
@@ -29,7 +30,7 @@
     .who-are-section .text {
         color: white;
         font-size: 20px;
-        max-width: 50%;
+        max-width: 40%;
     }
 
     .who-are-title::after {

@@ -82,11 +82,11 @@
     <h1 class="service-title">Nos Services</h1>
     <div class="accordion-wrapper">
         <div class="ctr-accordion">
-            <div class="tab">
+            <a href="/cross" class="tab">
                 <div class="tab_title">
                     <span class="span_title">Crosse</span>
                 </div>
-            </div>
+            </a>
             <div class="tab">
                 <div class="tab_title">
                     <span class="span_title">Fusils</span>

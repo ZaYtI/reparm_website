@@ -6,16 +6,6 @@
         align-items: center;
     }
 
-    .who-are-title {
-        position: relative;
-        color: #B54A29;
-        text-align: center;
-        padding: 2rem;
-        font-size: 2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
     .who-are-section {
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -32,29 +22,9 @@
         font-size: 20px;
         max-width: 40%;
     }
-
-    .who-are-title::after {
-        position: absolute;
-        content: "";
-        width: 38%;
-        height: 3px;
-        background: #B54A29;
-        left: 0;
-        bottom: 50%;
-    }
-
-    .who-are-title::before {
-        position: absolute;
-        content: "";
-        width: 38%;
-        height: 3px;
-        background: #B54A29;
-        right: 0;
-        bottom: 50%;
-    }
 </style>
 
-<h1 class="who-are-title">Qui sommes nous</h1>
+<x-top-section-title title="Qui sommes nous" :decoration="true" />
 <div class="container mx-auto who-are-section">
     <div class="description-container">
         <div class="logo">

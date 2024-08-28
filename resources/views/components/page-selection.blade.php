@@ -5,27 +5,25 @@
 
     .ctr-accordion {
         width: 100%;
-        height: 500px;
         display: flex;
         flex-direction: row;
         align-items: center;
         align-content: space-around;
         gap: 20px;
         overflow: hidden;
+        justify-content: center
     }
 
     .tab {
         position: relative;
         width: 20%;
-        height: inherit;
         padding: 20px;
         cursor: pointer;
+        min-height: 500px;
         transition: width .35s ease-in-out;
         border-radius: 25px;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
+        display: block;
     }
 
     .tab::before {
@@ -60,7 +58,6 @@
         transform: rotate(-90deg);
         transform-origin: 0% 0%;
         z-index: 2;
-        /* Ensures text is above the background */
     }
 
     .tab_title span {
@@ -72,14 +69,13 @@
         color: #B54A29;
         text-align: center;
         padding: 2rem;
-        font-size: 2rem;
         font-weight: bold;
         text-transform: uppercase;
     }
 </style>
 
 <div class="container mx-auto">
-    <h1 class="service-title">Nos Services</h1>
+    <x-top-section-title title="Nos Services" />
     <div class="accordion-wrapper">
         <div class="ctr-accordion">
             <a href="/cross" class="tab">
@@ -92,21 +88,21 @@
                     <span class="span_title">Fusils</span>
                 </div>
             </div>
-            <div class="tab">
+            {{-- <div class="tab">
                 <div class="tab_title">
                     <span class="span_title">Réglages</span>
                 </div>
-            </div>
-            <div class="tab">
+            </div> --}}
+            <a href="accessory" class="tab">
                 <div class="tab_title">
                     <span class="span_title">Accessoires</span>
                 </div>
-            </div>
-            <div class="tab">
+            </a>
+            <a href="/conform" class="tab">
                 <div class="tab_title">
-                    <span>Réparation</span>
+                    <span>Conformité</span>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

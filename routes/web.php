@@ -13,6 +13,19 @@ Route::get('/cross', function () {
     return view('pages.cross');
 });
 
+Route::get('/conform', function () {
+    return view('pages.conform');
+});
+
+Route::get('/settings', function () {
+    return view('pages.settings');
+});
+
+Route::get('/accessory', function () {
+    return view('pages.accessory');
+});
+
+
 
 
 Route::get('/dashboard', function () {

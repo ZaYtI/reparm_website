@@ -1,4 +1,4 @@
-@props(['reverse' => false, 'title', 'text'])
+@props(['reverse' => false, 'title', 'text' => ''])
 
 @php
     $containerClasses =
@@ -90,8 +90,8 @@
     @media screen and (max-width: 900px) {
         .element_container {
             display: block;
-            margin: auto auto;
             padding: 0;
+            margin-bottom: 4rem;
         }
 
         .side_image_wrapper {
@@ -113,7 +113,7 @@
         }
     }
 </style>
-<div {{ $attributes->merge(['class' => $containerClasses]) }} class="element_container my-3">
+<div {{ $attributes->merge(['class' => $containerClasses]) }}>
     <div class="side_image_wrapper">
         <div class="side_image">
             <img src="{{ asset('images/banniere_accueil.jpg') }}" alt="banner"

@@ -83,16 +83,11 @@
                     <span class="span_title">Crosse</span>
                 </div>
             </a>
-            <div class="tab">
+            <a href="/products" class="tab">
                 <div class="tab_title">
                     <span class="span_title">Fusils</span>
                 </div>
-            </div>
-            {{-- <div class="tab">
-                <div class="tab_title">
-                    <span class="span_title">Réglages</span>
-                </div>
-            </div> --}}
+            </a>
             <a href="accessory" class="tab">
                 <div class="tab_title">
                     <span class="span_title">Accessoires</span>

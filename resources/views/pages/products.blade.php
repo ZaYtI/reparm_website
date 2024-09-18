@@ -4,16 +4,17 @@
     }
 
     .product-card-ctr {
-        padding: 1rem;
+        width: 100%;
         display: flex;
+        align-items: flex-start;
         justify-content: space-around;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.5rem;
         transition: all .5s ease-in-out;
     }
 
     .product-card {
-        max-width: 350px;
+        max-width: 300px;
         width: 100%;
         border-radius: 0.5rem;
         overflow: hidden;
@@ -40,12 +41,23 @@
 
     .has-stock {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .label-text {
         margin-left: 0.5rem;
         color: white;
+    }
+
+    .btn-basket {
+        background-color: #B54A29;
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+    }
+
+    .add-basket-icons {
+        fill: white;
+        max-width: 30px;
     }
 </style>
 
@@ -53,6 +65,9 @@
     <x-banner />
     <x-top-section-title title="Nos Fusils" :decoration="true" />
     <div class="container mx-auto product-ctr">
+        <div class="categories-wrapper">
+            <x-selection-categorie :categories="$categories" />
+        </div>
         <div class="product-card-ctr">
             @foreach ($products as $product)
                 <div class=" product-card">
@@ -72,9 +87,10 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="text-3xl font-bold text-gray-900 dark:text-white">{{ $product->price }}€</span>
-                            <a href="#"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ajouter
-                                au panier</a>
+                            <button class="btn-basket">
+                                <img src="{{ asset('images/basket-icons.svg') }}" alt="add-basket-icons"
+                                    class="add-basket-icons">
+                            </button>
                         </div>
                     </div>
                 </div>
